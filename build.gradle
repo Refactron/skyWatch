@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.3'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'java'
+}
+
+group = 'com.ppc8'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'        // Web MVC, Tomcat
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'   // JPA + Hibernate
+    implementation 'com.h2database:h2'                                       // H2 database
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'    // WebFlux (reactive), not RestTemplate
+    //testImplementation 'org.springframework.boot:spring-boot-starter-test'   // Test framework
+}
+
+bootJar {
+    mainClass = 'com.ppc8.skyWatch.SkyWatchApplication'
+}
