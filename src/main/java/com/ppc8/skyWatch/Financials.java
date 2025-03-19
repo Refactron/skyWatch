@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Table(name = "financials")
 public class Financials {
     @Id
-    private String id; // e.g., AAPL-2022-Q1
+    private String id;
 
     @ManyToOne
     private Company company;
